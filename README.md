@@ -20,5 +20,5 @@ x509 -req -in ca.csr -signkey ca.key -CAcreateserial -out ca.crt -days 1000
 
 # check the certificate info
 docker run --rm -w /root -v $PWD:/root shubhamtatvamasi/openssl \
-x509 -in ca.crt -text -noout
+x509 -text -noout -in ca.crt
 ```

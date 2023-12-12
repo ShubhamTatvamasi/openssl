@@ -3,7 +3,7 @@
 
 Start oqs docker image:
 ```bash
-docker run --rm -it openquantumsafe/curl sh
+docker run --rm -it openquantumsafe/openssl3 sh
 ```
 
 Generate CA:

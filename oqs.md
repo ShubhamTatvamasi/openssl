@@ -30,3 +30,15 @@ Generate self self-signed certificate:
 ```bash
 openssl req -x509 -new -newkey dilithium5 -keyout server.key -out server.crt -nodes -days 365 -subj "/CN=Post-Quantum CA"
 ```
+
+
+### Google Chrome
+
+TLS 1.3 hybridized Kyber support \
+This option enables a combination of X25519 and Kyber in TLS 1.3. – Mac, Windows, Linux, ChromeOS, Android, Fuchsia, Lacros
+
+chrome://flags/#enable-tls13-kyber
+
+
+
+

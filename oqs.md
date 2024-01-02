@@ -41,4 +41,9 @@ chrome://flags/#enable-tls13-kyber
 
 https://github.com/open-quantum-safe/oqs-demos/releases
 
+```bash
+kubectl create deployment quantum-nginx --image=openquantumsafe/nginx
+kubectl expose deployment quantum-nginx --port=4433 --name=quantum-nginx
+```
+
 

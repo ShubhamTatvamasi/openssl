@@ -31,7 +31,11 @@ openssl rsa -in private.pem -outform PEM -pubout -out public.pem
 
 RSA 2048 bit key
 ```bash
+# Generate Certifcate Request
 openssl req -new -newkey rsa:2048 -nodes -keyout shubhamtatvamasi.key -out shubhamtatvamasi.csr
+
+# Self-Sign Certificate
+openssl x509 -req -in shubhamtatvamasi.csr -signkey shubhamtatvamasi.key -out shubhamtatvamasi.crt -days 365
 ```
 ---
 

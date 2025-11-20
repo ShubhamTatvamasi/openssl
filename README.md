@@ -87,3 +87,24 @@ openssl x509 -text -noout -in certificate.crt
 ```bash
 awk 'NF {sub(/\r/, ""); printf "%s\\n",$0;}' cert-name.pem
 ```
+
+---
+
+Extract the web server’s certificate:
+```bash
+openssl s_client -connect example.com:443 -showcerts < /dev/null
+```
+
+Copy certificate into the RedHat trust anchor directory:
+```bash
+sudo cp server.crt /etc/pki/ca-trust/source/anchors/
+```
+> File must end with `.crt` or it will not be loaded.
+
+Update CA trust:
+```bash
+sudo update-ca-trust
+```
+
+
+

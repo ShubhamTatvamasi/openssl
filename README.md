@@ -89,6 +89,12 @@ openssl x509 -noout -issuer -subject -in cert.pem
 openssl verify -CAfile cert.pem cert.pem
 ```
 
+### Convert .cer → .pem
+
+```bash
+openssl x509 -inform DER -in certificate.cer -out certificate.pem
+```
+
 ---
 
 ### Convert a PEM based file to JSON

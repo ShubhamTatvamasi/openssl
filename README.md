@@ -82,6 +82,15 @@ openssl x509 -text -noout -in certificate.crt
 ```
 ---
 
+### Check whether a certificate is self-signed
+
+```bash
+openssl x509 -noout -issuer -subject -in cert.pem
+openssl verify -CAfile cert.pem cert.pem
+```
+
+---
+
 ### Convert a PEM based file to JSON
 
 ```bash

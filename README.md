@@ -89,6 +89,8 @@ openssl x509 -noout -issuer -subject -in cert.pem
 openssl verify -CAfile cert.pem cert.pem
 ```
 
+---
+
 ### Convert .cer → .pem
 
 ```bash
